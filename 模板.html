@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!-- 如果安装了Google chrome frame则强制用GCF来渲染，否则IE用最高版本的IE内核来渲染 -->
+	<meta name="renderer" content="ie-comp"><!-- 360的话默认用ie兼容内核 -->
+
+	<link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
+	<title>WMK医宝 | 欢迎登录</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" />
+	<![endif]-->
+	
+	
+	
+	
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<div class="alert-danger" role="alert">
+			你的浏览器实在<strong>太太太太太太旧了</strong>，导致页面无法完美显示渲染。放学别走，升级完浏览器再说 → <a target="_blank" class="alert-danger-anchor" href="http://browsehappy.com">立即升级</a>
+		</div>
+	<![endif]-->
+	<div class="container">
+		<div class="header">
+			<header>
+				<div class="header-memu">
+					<ul>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">首页</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">知识广场</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">知识库</a>
+						</li>
+						<li class="header-memu_item">
+							<div class="header-memu_line"></div>
+						</li>
+						<li class="header-memu_item register">
+							<div class="imgWrap"><img src="images/HeaderRegister.png"></div><a class="anchor" href="#">注册</a>
+						</li>
+						<li class="header-memu_item login">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="#">登录</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-logo imgWrap">
+					<img src="images/logo.png">
+				</div>
+			</header>
+		</div>
+
+
+		<div class="main">
+			<main>
+				
+			</main>
+		</div>
+
+
+		<div class="footer">
+			<footer>
+				<div class="footerWrap">
+					<p>&copy;2017 - WMKmedical . com 粤ICP备 8888888888号</p>
+					<ul>
+						<li>
+							<a class="anchor" href="#">关于我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">加入我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">用户须知</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">服务条款</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">隐私政策</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<!-- 让footer始终在最底部 -->
+	<script type="text/javascript">
+		var header = $('.header');
+	    var inner = $('.main');
+	    var footer = $('.footer'); 
+	    var win = $(window);
+
+
+	    function fix_footer(){
+	        var h = win.height() - header.outerHeight() - footer.outerHeight();
+	        inner.css({
+	            minHeight: h < 0 ? 0 : h
+	        });
+	    }
+
+	    fix_footer();
+
+	    win.on('resize',function(){
+	        fix_footer();
+	    });
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

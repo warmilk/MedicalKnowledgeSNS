@@ -1,0 +1,149 @@
+@import url(normalize.css);
+
+
+html{
+    overflow:auto;
+}
+body{
+    font:14px/1 微软雅黑,"microsoft yahei",Arial,Helvetica,sans-serif;
+    background: #F6F6F6;
+    height:100%;
+}
+
+
+/* =========================================公共控件开始===================================== */
+/* 自适应的图片 */
+.imgWrap{
+    display: inline-block;
+}
+.imgWrap img{
+    width: 100%;
+    vertical-align: middle;
+}
+/* 超链接 */
+.anchor{
+    text-decoration: none;
+}
+.anchor:hover{
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+}
+
+
+
+
+
+
+/* ========================================模板开始======================================== */
+.header{
+/*     margin-bottom: -60px;
+    position: relative;
+    z-index: 2; */
+    height:60px;
+    background:#fff;
+    width:100%;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+.header-logo{
+    line-height: 60px;
+    width: 185px;
+    float: left;
+    margin-left:6%;
+}
+.header-memu{
+    float: right;
+    margin-right: 6%;
+}
+.header-memu ul{
+    list-style: none;
+    color:#404040;
+}
+.header-memu_item{
+    float:left;
+    margin:20px;
+}
+.header-memu_item:hover{
+    cursor: pointer;
+}
+.header-memu a{
+    color:#404040;
+}
+.header-memu_line{
+    width: 2px;
+    height: 15px;
+    background:#ccc;
+}
+.register .imgWrap{
+    padding-right: 10px;
+    vertical-align: 1px;
+}
+.login .imgWrap{
+    padding-right: 10px;
+    vertical-align: 1px;
+}
+
+
+.main{
+    min-height: 100%;
+    width: 100%;
+}
+/* .main main{
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 90px;
+} */
+.container{
+    height: 100%;
+}
+.footer{
+/*     margin-top: -90px; */
+    width: 100%;
+    height: 90px;
+    background:#fff;
+    border-top: 1px solid #ccc;
+    margin: 0 auto;
+    position: relative;
+
+}
+.footerWrap{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    text-align: center;
+    color: #9A9A9A;
+}
+
+.footer li{
+    width: 6em;
+    float: left;
+    list-style-position: inside;
+    color:#9A9A9A;
+    padding-top:1em ;
+}
+.footerWrap li:first-child{
+    list-style: none;
+}
+.footerWrap a{
+    color: #9A9A9A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
