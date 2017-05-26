@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!-- 如果安装了Google chrome frame则强制用GCF来渲染，否则IE用最高版本的IE内核来渲染 -->
+	<meta name="renderer" content="ie-comp"><!-- 360的话默认用ie兼容内核 -->
+
+	<link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
+	<title>WMK医宝 | 欢迎注册</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" href="iCheck/flat/blue.css">
+	
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" />
+	<![endif]-->
+	
+	
+	
+	
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<div class="alert-danger" role="alert">
+			你的浏览器实在<strong>太太太太太太旧了</strong>，导致页面无法完美显示渲染。放学别走，升级完浏览器再说 → <a target="_blank" class="alert-danger-anchor" href="http://browsehappy.com">立即升级</a>
+		</div>
+	<![endif]-->
+	<div class="container">
+		<div class="header">
+			<header>
+				<div class="header-memu">
+					<ul>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">首页</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">知识广场</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">知识库</a>
+						</li>
+						<li class="header-memu_item">
+							<div class="header-memu_line"></div>
+						</li>
+						<li class="header-memu_item login">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="#">登录</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-logo imgWrap">
+					<img src="images/logo.png">
+				</div>
+			</header>
+		</div>
+
+
+		<div class="main">
+			<main>
+				<!-- 注册流程小导航条 -->
+				<div class="registerNav">
+					<ul>
+						<li class="current">
+							<h4 class="registerNav_h4">1 填写基本信息</h4>
+						</li>
+						<li>
+							<h4 class="registerNav_h4">2 邮箱激活</h4>
+						</li>
+						<li>
+							<h4 class="registerNav_h4">3 完成注册</h4>
+						</li>
+					</ul>
+				</div>
+
+				
+
+				<!-- 注册step1 -->
+				<section>
+					<div class="loginBox">
+						<form>
+							<div class="loginInput">
+								<div class="loginInput-tip warnTip">
+									<div class="imgWrap warnTipImg"><img src="images/loginTip.png" alt="您的输入有误"></div>
+									<span>亲，此项必须填哦</span>
+								</div>
+								<div class="imgWrap loginInput-icon"><img src="images/loginUser.png" alt="账号"></div>
+								<input type="text" name="" placeholder="请输入您的常用邮箱">
+							</div>
+							<div class="loginInput">
+								<div class="loginInput-tip warnTip">
+									<div class="imgWrap warnTipImg"><img src="images/loginTip.png" alt="您的输入有误"></div>
+									<span>密码必须6-16位哦</span>
+								</div>
+								<div class="imgWrap loginInput-icon"><img src="images/loginPw.png" alt="密码"></div>
+								<input type="password" name="" placeholder="请输入6-16位密码">
+							</div>
+							<div class="loginInput">
+								<div class="loginInput-tip warnTip">
+									<div class="imgWrap warnTipImg"><img src="images/loginTip.png" alt="您的输入有误"></div>
+									<span>两次输入不一致哦</span>
+								</div>
+								<div class="imgWrap loginInput-icon"><img src="images/loginPw.png" alt="密码"></div>
+								<input type="password" name="" placeholder="请再次输入密码">
+							</div>
+							<div class="loginAbPW">
+								<label id="remberPW">
+									<input type="checkbox" checked>
+									同意<a href="#" class="anchor"><span>&quot;隐私条款&quot;</span></a>和<a href="#" class="anchor">&quot;用户须知&quot;</a>和<a href="#">&quot;隐私政策&quot;</a>
+								</label>
+							</div>
+							<div class="btnWrap">
+								<button>注册</button>
+							</div>
+						</form>
+						<div class="loginA">
+							<a href="#" class="anchor">已有账号，立即登录</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- 注册step2 -->
+				<section style="display: none;">
+					<div class="loginBox enableBox">
+						<div class="warnTip">
+							<div class="imgWrap warnTipImg"><img src="images/loginTip.png" alt="您的输入有误"></div>
+							<span>邮件已发出，请48小时内登录验证</span>
+						</div>
+						<div class="imgWrap enableBoxIcon"><img src="images/send.png" alt="请及时查收邮件"></div>
+						<ol class="enableOl">
+							<h3>还没收到验证邮件？</h3>
+							<li>尝试到广告邮件、垃圾邮件目录找找看</li>
+							<li><a href="#">再次发送验证邮件</a></li>
+							<li>如果重发注册验证邮件仍然没收到，请<a href="#">重新注册</a></li>
+						</ol>
+						<form>
+							<div class="btnWrap">
+								<button>马上登录邮箱激活！</button>
+							</div>
+						</form>
+						<div class="loginA">
+							<a href="#" class="anchor">已有账号，立即登录</a>
+						</div>
+					</div>
+				</section>
+				
+				<!-- 注册step3 -->
+				<section style="display: none;">
+					<div class="loginBox enableBox successBox">
+						<div class="imgWrap enableBoxIcon"><img src="images/enable.png" alt="激活成功"></div>
+						<p class="successMsg">恭喜您！</p>
+						<p class="successMsg">账号激活成功了！</p>
+						<form>
+							<div class="btnWrap">
+								<button>马上登录！</button>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			</main>
+		</div>
+
+
+		<div class="footer">
+			<footer>
+				<div class="footerWrap">
+					<p>&copy;2017 - WMKmedical . com 粤ICP备 8888888888号</p>
+					<ul>
+						<li>
+							<a class="anchor" href="#">关于我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">加入我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">用户须知</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">服务条款</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">隐私政策</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+	<!-- 点击注册流程导航条 -->
+	<script type="text/javascript">
+		$(document).ready(function (){
+		   $(".registerNav li").each(function(index){
+			    $(this).click(function(){ 
+			    	// 流程条当前块样式切换 
+				    $(".registerNav li").removeClass("current");
+				    $(".registerNav li").eq(index).addClass("current");
+				    // 切换不同的section
+				    $("section").hide();
+				    $("section").eq(index).addClass("animated fadeInRightBig").show();
+			    });
+		    });
+		 });
+	</script>
+
+	<!-- 记住密码的CheckBox -->
+	<script src="iCheck/icheck.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $('input').iCheck({
+	    checkboxClass: 'icheckbox_flat-blue',
+	    radioClass: 'iradio_flat-blue'
+	  });
+	});
+	</script>
+
+	<!-- 让footer始终在最底部 -->
+	<script type="text/javascript">
+		var header = $('.header');
+	    var inner = $('.main');
+	    var footer = $('.footer'); 
+	    var win = $(window);
+
+
+	    function fix_footer(){
+	        var h = win.height() - header.outerHeight() - footer.outerHeight();
+	        inner.css({
+	            minHeight: h < 0 ? 0 : h
+	        });
+	    }
+
+	    fix_footer();
+
+	    win.on('resize',function(){
+	        fix_footer();
+	    });
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

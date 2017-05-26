@@ -36,9 +36,9 @@ body{
 
 /* ========================================模板开始======================================== */
 .header{
-/*     margin-bottom: -60px;
-    position: relative;
-    z-index: 2; */
+    position: fixed;
+    z-index: 99;
+    top: 0;
     height:60px;
     background:#fff;
     width:100%;
@@ -85,6 +85,7 @@ body{
 
 
 .main{
+    padding-top: 60px;
     min-height: 100%;
     width: 100%;
 }
