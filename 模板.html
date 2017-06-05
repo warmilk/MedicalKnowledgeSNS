@@ -8,6 +8,8 @@
 	<link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
 	<title>WMK医宝 | 欢迎登录</title>
 	
+
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_n3sr9m4njowp14i.css"><!-- 需要联网的网络字体图标。也可下载到本地服务器直接调用，把路径引对即可 -->
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	
 	<!--[if lt IE 9]>
@@ -41,11 +43,24 @@
 						<li class="header-memu_item">
 							<div class="header-memu_line"></div>
 						</li>
+
+						<!-- 未登录 -->
 						<li class="header-memu_item register">
 							<div class="imgWrap"><img src="images/HeaderRegister.png"></div><a class="anchor" href="#">注册</a>
 						</li>
 						<li class="header-memu_item login">
 							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="#">登录</a>
+						</li>
+
+						<!-- 登陆后 -->
+						<li class="header-memu_item login dropdown-btn">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="#"><span id="user-nickname">超级大帅比</span></a>
+							<ul  class="dropdown-meau" style="display: none;">
+								<i class="triangel"></i>
+								<li class="dropdown-meau-item"><a href="#"><i class="iconfont icon-star"></i>我的收藏</a></li>
+								<li class="dropdown-meau-item"><a href="#"><i class="iconfont icon-yonghu"></i>个人信息</a></li>
+								<li class="dropdown-meau-item"><a href="#"><i class="iconfont icon-tuichu"></i>退出登录</a></li>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -111,6 +126,34 @@
 	        fix_footer();
 	    });
 	</script>
+
+
+		<!-- 点击用户名 -->
+		<script>
+		$(document).ready(function (){
+			/*下弹菜单*/
+		   $(".dropdown-btn").each(function(index){
+			    $(this).click(function(){ 
+			    	if($(".dropdown-meau").eq(index).css("display")=="none"){
+			    		$(".dropdown-meau").eq(index).show();
+			    		$(".dropdown-meau").eq(index).mouseleave(function () {
+			    			$(".dropdown-meau").eq(index).hide();
+			    		});
+	 		    	}
+			    	else{
+			    		$(".dropdown-meau").eq(index).hide();
+			    	}
+
+			    	
+			    	
+			    });
+		    });
+
+
+	    });
+
+		
+		</script>
 </body>
 </html>
 

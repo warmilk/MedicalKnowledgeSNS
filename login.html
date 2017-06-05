@@ -191,6 +191,11 @@
 	        fix_footer();
 	    });
 	</script>
+	
+	<!-- 防止图片被拖到新窗口打开 -->
+	<script language="javascript">
+		$("img").bind("dragstart",function(){return false;});
+	</script>
 </body>
 </html>
 
