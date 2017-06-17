@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!-- 如果安装了Google chrome frame则强制用GCF来渲染，否则IE用最高版本的IE内核来渲染 -->
+	<meta name="renderer" content="ie-comp"><!-- 360的话默认用ie兼容内核 -->
+
+	<link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
+	<title>WMK医宝 | 我的收藏（知识库）</title>
+
+	<!-- tooltipster -->
+	<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
+	
+    <link rel="stylesheet" type="text/css" href="css/font/font_3xfq2v964oyldi.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_x500vx727nl8fr.css"><!-- 需要联网的网络字体图标。也可下载到本地服务器直接调用，把路径引对即可 -->
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/popupBox.css">
+
+	<link rel="stylesheet" type="text/css" href="css/myNote.css">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" />
+	<![endif]-->
+	
+	
+	
+	
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<div class="alert-danger" role="alert">
+			你的浏览器实在<strong>太太太太太太旧了</strong>，导致页面无法完美显示渲染。放学别走，升级完浏览器再说 → <a target="_blank" class="alert-danger-anchor" href="http://browsehappy.com">立即升级</a>
+		</div>
+	<![endif]-->
+	<div class="container">
+		<div class="header">
+			<header>
+				<div class="header-memu">
+					<ul>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">首页</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">知识广场</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="#">知识库</a>
+						</li>
+						<li class="header-memu_item">
+							<div class="header-memu_line"></div>
+						</li>
+
+						<!-- 未登录 -->
+						<li class="header-memu_item register">
+							<div class="imgWrap"><img src="images/HeaderRegister.png"></div><a class="anchor" href="#">注册</a>
+						</li>
+						<li class="header-memu_item login">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="#">登录</a>
+						</li>
+
+						<!-- 登陆后 -->
+						<li class="header-memu_item login dropdown-btn">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="javascript:void(0);"><span id="user-nickname">超级大帅比</span></a>
+							<ul  class="dropdown-meau" style="display: none;">
+								<i class="triangel"></i>
+								<li class="dropdown-meau-item"><a href="#"><i class="iconfont icon-star"></i>个人中心</a></li>
+								<li class="dropdown-meau-item"><a href="#"><i class="iconfont icon-yonghu"></i>我的信息</a></li>
+								<li class="dropdown-meau-item"><a href="#"><i class="iconfont icon-tuichu"></i>退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="header-logo imgWrap">
+					<img src="images/logo.png">
+				</div>
+			</header>
+		</div>
+
+
+		<div class="main">
+			<main>
+
+
+				<!-- 左侧导航栏 -->
+				<div class="navWrap">
+					<ul class="main-nav">
+						<li>
+							<a href="#"><span class="main-nav-Ltxt">我的收藏</span><span class="nav-Rtxt">12</span></a>
+							<ul class="sub-nav">
+								<li>
+									<a href="#"><span>知识广场</span><span class="nav-Rtxt">5</span></a>
+								</li>
+								<li>
+									<a href="#"><span>知识库</span><span class="nav-Rtxt">7</span></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span class="main-nav-Ltxt">我的笔记</span><span class="nav-Rtxt">10</span></a>
+							<ul class="sub-nav">
+								<li><span>心衰症状</span><span class="nav-Rtxt">5</span></li>
+								<li><span>药物反应</span><span class="nav-Rtxt">7</span></li>
+								<li><span>蛋白质测定</span><span class="nav-Rtxt">7</span></li>
+								<li><span>补钙注意事项</span><span class="nav-Rtxt">5</span></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span class="main-nav-Ltxt">我的分享</span><span class="nav-Rtxt">10</span></a>
+						</li>
+					</ul>
+				</div>
+
+
+
+				<!-- 右侧主要内容 -->
+				<div class="mainContent">
+					<!-- 我的笔记（笔记本管理） -->
+					<section class="knowledgeRepo knowledgeRepo-colTagWrap">
+
+
+						<!-- 小标题 -->
+						<h4 class="knowledgeRepoWrapper-title"><a href="#">我的笔记</a>&nbsp;&gt;&nbsp;笔记本</h4>
+
+						<!-- 我的笔记本 -->
+						<article>
+							<div class="knowledgeRepoWrapper">
+								<div class="knowledgeRepoContent knowledgeRepo-colTag">
+									<!-- 笔记本展示 -->
+									<div class="knowledgeRepo-colTag-show">
+										<button class="btn knowledgeRepo-colTag-item tooltip" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">全部</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">12</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">未分类</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">4</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">发烧</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">1</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">感冒</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">4</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">备孕</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">5</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">癌症预防</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">3</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">视力保护</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">4</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">腹泻</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">1</span>
+										</button>
+										<button class="btn knowledgeRepo-colTag-item tooltip knowledgeRepo-colTag-item_del" title="点击笔记本可对下方我的笔记进行筛选哦">
+											<span class="knowledgeRepo-colTag-item_tagname">小儿咳嗽</span>&nbsp;<span class="knowledgeRepo-colTag-item_tagCount">1</span>
+										</button>
+									</div>
+									<!-- 笔记本操作 -->
+									<div class="knowledgeRepo-colTag-operate">
+										<div>
+											<div class="knowledgeRepo-colTag-operate-input filterInput">
+												<input type="text" name="" placeholder="查找我的笔记本"><i class="knowledgeRepo-colTag-operate-searchicon"><img src="images/search-gray.png" alt=""></i>
+											</div>
+											<div class="knowledgeRepo-colTag-operate-btn editTag-btn"><button class="btn"><i class="iconfont icon-bianji"></i><span>编辑</span></button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</section>
+
+					<!-- 我的笔记-->
+					<section class="knowledgeRepo knowledgeRepo-colItemWrap">
+
+
+						<!-- 小标题 -->
+						<h4 class="knowledgeRepoWrapper-title knowledgeRepo-col-title"><a href="#">我的笔记</a>&nbsp;&gt;&nbsp;我的笔记</h4>
+
+						<!-- 我的笔记（过滤条） -->
+						<aside>
+							<div class="knowledgeRepo-filter">
+								<div>
+									<div class="knowledgeRepo-filter-btn knowledgeRepo-filter-btn-current">
+										<button class="btn">全部</button>
+									</div>
+									<div class="knowledgeRepo-filter-btn">
+										<button class="btn">按编辑时间</button>
+									</div>
+									<div class="knowledgeRepo-filter-btn">
+										<button class="btn">按分享次数</button>
+									</div>
+									<div class="knowledgeRepo-filter-input filterInput">
+										<input type="text" name="" placeholder="查找我的收藏"><i class="knowledgeRepo-colTag-operate-searchicon"><img src="images/search-gray.png" alt=""></i>
+									</div>
+								</div>
+							</div>
+						</aside>
+
+
+						<!-- 卡片式文章（纯文字） -->
+						<article>
+							<div class="knowledgeRepoWrapper knowledgeRepo-note-Wrapper">
+								<article>
+									<!-- 内容 -->
+									<div class="knowledgeRepoContent">
+										<div class="article-title">
+											<h4 class="article-content-title">丙酮酸尿糖病症</h4>
+											<p class="user-editInfo"><a class="myNote-via" href="#"><i class="iconfont icon-laiyuan"></i>&nbsp;<span>中老年人如何养生？</span></a></p>
+										</div>
+										<div class="article-content">
+											<p>苯丙酮尿症比例半路啦啦啦啦啦绿了二诶一一，让后或或或或或IEhi他，们两个哦哦恶心。个苯丙酮尿，哦哦。诶个，没干症比例半路啦啦让后或或或。或或I噼噼啪啪，鹅鹅鹅发品可用。苯丙酮尿，哦没干症比例半路啦，UN额空 苯丙酮尿症比例半路啦啦啦啦啦绿了二诶一一，让后或或或或或I...<a href="javascript:void(0);" class="showAllArticle">展开全文&nbsp;<i class="iconfont icon-2"></i></a></p>
+										</div>
+										<div class="article-collectTime">
+											<p>最后编辑于&nbsp;&nbsp;<span class="user-editTime">6月1日&nbsp;22:30</span></p>
+										</div>
+										<div class="article-operate">
+											<div class="article-operate-item">
+												<span class="collect"><i class="iconfont icon-bianji"></i><span class="article-operate-item-txt">编辑</span></span>
+											</div>
+											<div class="hr-line"></div>
+											<div class="article-operate-item">
+												<span class="share"><i class="iconfont icon-fenxiang1"></i><span class="article-operate-item-txt">分享</span></span>
+											</div>
+											<div class="hr-line"></div>
+											<div class="article-operate-item">
+												<span class="delNote"><i class="iconfont icon-icon"></i><span class="article-operate-item-txt">删除</span></span>
+											</div>
+										</div>
+									</div>
+									<!-- 卡片右上角的标签 -->
+									<div class="coltag" title="双击该标签可进行编辑哦">
+										<span>癌症预防</span>
+									</div>
+								</article>
+							</div>
+						</article>
+						
+
+						
+
+						<!-- 卡片式文章（有图片） -->
+						<article>
+							<div class="knowledgeRepoWrapper  knowledgeRepo-note-Wrapper">
+								<article>
+									<div class="knowledgeRepoContent">
+										<div class="article-title">
+											<h4 class="article-content-title">丙酮酸尿糖病症</h4>
+											<p class="user-editInfo"><a class="myNote-via" href="#"><i class="iconfont icon-laiyuan"></i>&nbsp;<span>中老年人如何养生？</span></a></p>
+										</div>
+										<div class="article-content">
+											<p>
+												<!-- 图片 -->
+												<div class="article-content-img"></div>
+												<img class="article-content-img_hide" src="images/article.jpg" alt="文章配图" style="border:10px solid #66CCFF; position: absolute; left:16em; top:50%; transform: translateY(-50%); z-index: 99; display: none;">
+												<!-- 文字内容 -->
+												<p>苯丙酮尿症比例半路啦啦啦啦啦绿了二诶一一，让后或或或或尿，哦没干症比例半路啦，UN额空 苯丙酮尿症比例半路啦啦啦，苯丙酮尿症比例半路啦啦啦啦，苯丙酮尿症比例半。苯丙酮尿症比例半路啦啦啦啦啦绿。让...<a href="javascript:void(0);" class="showAllArticle">展开全文&nbsp;<i class="iconfont icon-2"></i></a></p>
+											</p>
+										</div>
+										<div class="article-collectTime">
+											<p>最后编辑于&nbsp;&nbsp;<span class="user-editTime">6月1日&nbsp;22:30</span></p>
+										</div>
+										<div class="article-operate">
+											<div class="article-operate-item">
+												<span class="collect"><i class="iconfont icon-bianji"></i><span class="article-operate-item-txt">编辑</span></span>
+											</div>
+											<div class="hr-line"></div>
+											<div class="article-operate-item">
+												<span class="share"><i class="iconfont icon-fenxiang1"></i><span class="article-operate-item-txt">3</span></span>
+											</div>
+											<div class="hr-line"></div>
+											<div class="article-operate-item">
+												<span class="delNote"><i class="iconfont icon-icon"></i><span class="article-operate-item-txt">删除</span></span>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</article>
+						
+
+						<!-- 卡片式文章（纯文字） -->
+						<article>
+							<div class="knowledgeRepoWrapper  knowledgeRepo-note-Wrapper">
+								<article>
+									<div class="knowledgeRepoContent">
+										<div class="article-title">
+											<h4 class="article-content-title">丙酮酸尿糖病症</h4>
+											<p class="user-editInfo"><a class="myNote-via" href="#"><i class="iconfont icon-laiyuan"></i>&nbsp;<span>中老年人如何养生？</span></a></p>
+										</div>
+										<div class="article-content">
+											<p>苯丙酮尿症比例半路啦啦啦啦啦绿了二诶一一，让后或或或或或IEhi他，们两个哦哦恶心。个苯丙酮尿，哦哦。诶个，没干症比例半路啦啦让后或或或。或或I噼噼啪啪，鹅鹅鹅发品可用。苯丙酮尿，哦没干症比例半路啦，UN额空 苯丙酮尿症比例半路啦啦啦啦啦绿了二诶一一，让后或或或或或I...<a href="javascript:void(0);" class="showAllArticle">展开全文&nbsp;<i class="iconfont icon-2"></i></a></p>
+										</div>
+										<div class="article-collectTime">
+											<p>最后编辑于&nbsp;&nbsp;<span class="user-editTime">6月1日&nbsp;22:30</span></p>
+										</div>
+										<div class="article-operate">
+											<div class="article-operate-item">
+												<span class="collect"><i class="iconfont icon-bianji"></i><span class="article-operate-item-txt">编辑</span></span>
+											</div>
+											<div class="hr-line"></div>
+											<div class="article-operate-item">
+												<span class="share"><i class="iconfont icon-fenxiang1"></i><span class="article-operate-item-txt">分享</span></span>
+											</div>
+											<div class="hr-line"></div>
+											<div class="article-operate-item">
+												<span class="delNote"><i class="iconfont icon-icon"></i><span class="article-operate-item-txt">删除</span></span>
+											</div>
+										</div>
+									</div>
+									<!-- 卡片右上角的标签 -->
+									<div class="coltag" title="双击该标签可进行编辑哦">
+										<span>感冒</span>
+									</div>
+								</article>
+							</div>
+						</article>
+					</section>
+				</div>
+				
+				<!-- 半透明遮罩 -->
+				<div style="position: fixed; top: 0px; left: 0px; bottom: 0px; right:0px; background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.6; filter: alpha(opacity:60); z-index: 100; display: none;" id="mask"></div>
+				
+				<!-- 分享弹出框 -->
+				<div class="PopupBox" style="display: none; ">
+				    <h4 class="PopupBox-title title">分享到</h4>
+				    <button class="btn closePrompt" id="closePswModi"><i class="xk-cuo xsxkxtFont"></i></button>
+				    <div class="popupboxContent">
+				        <div class="snsIcon">
+				        	<img src="images/user-icon.png" alt="">
+				        	<img src="images/user-icon.png" alt="">
+				        	<img src="images/user-icon.png" alt="">
+				        	<img src="images/user-icon.png" alt="">
+				        </div>
+				        <div class="popupboxContent-btn">
+				        	<button class="btn closePromptBtn" type="button">取消</button>
+				        </div>
+				    </div>
+				</div>
+
+
+			</main>
+		</div>
+
+
+		<div class="footer">
+			<footer>
+				<div class="footerWrap">
+					<p>&copy;2017 - WMKmedical . com 粤ICP备 8888888888号</p>
+					<ul>
+						<li>
+							<a class="anchor" href="#">关于我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">加入我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">用户须知</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">服务条款</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">隐私政策</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+	
+	<!-- 让footer始终在最底部 -->
+	<script type="text/javascript">
+		var header = $('.header');
+	    var inner = $('.main');
+	    var footer = $('.footer'); 
+	    var win = $(window);
+
+
+	    function fix_footer(){
+	        var h = win.height() - header.outerHeight() - footer.outerHeight();
+	        inner.css({
+	            minHeight: h < 0 ? 0 : h
+	        });
+	    }
+
+	    fix_footer();
+
+	    win.on('resize',function(){
+	        fix_footer();
+	    });
+	</script>
+
+
+	<!-- 点击用户名 -->
+	<script>
+	$(document).ready(function (){
+		/*下弹菜单*/
+	   $(".dropdown-btn").each(function(index){
+		    $(this).click(function(){ 
+		    	if($(".dropdown-meau").eq(index).css("display")=="none"){
+		    		$(".dropdown-meau").eq(index).show();
+		    		$(".dropdown-meau").eq(index).mouseleave(function () {
+		    			$(".dropdown-meau").eq(index).hide();
+		    		});
+ 		    	}
+		    	else{
+		    		$(".dropdown-meau").eq(index).hide();
+		    	}
+
+		    	$(".search-dropdown-meau-item").each(function (itemIndex) {
+		    		$(this).click(function () {
+		    			$(this).parent().siblings().html('<span>'+$(".search-dropdown-meau-item").eq(itemIndex).html()+'<i class="search-triangel"></i></span>');
+		    		});
+		    	});
+		    	
+		    });
+	    });
+    });
+	</script>
+
+	
+
+	
+	<script type="text/javascript">
+		$(document).ready(function (){
+			
+
+
+		   $(".article-content-img").each(function(articleImgIndex) {
+		   		// 鼠标经过缩略图弹出大图
+		   	   $(this).mouseover(function(){
+		   	   		$(".article-content-img_hide").eq(articleImgIndex).show();
+		   		});
+		   	   // 鼠标移走隐藏大图
+		   	   $(this).mouseout(function(){
+		   	   		$(".article-content-img_hide").eq(articleImgIndex).hide();
+		   		});
+
+		   });
+
+
+
+
+		   // 点击删除笔记
+		    $(".delNote").each(function(delNoteIndex) {
+		   		$(this).click(function() {
+		   			$(".delNote").parents(".knowledgeRepo-note-Wrapper").eq(delNoteIndex).remove();
+		   		});
+		    });
+
+		   // 点击分享
+		    $(".share").each(function(shareIndex) {
+		   		$(this).click(function() {
+		   			$(".PopupBox").show().addClass("animated rubberBand");
+		   			$("#mask").show();
+		   		});
+		    });
+
+		    // 点击关闭
+		    $(".closePrompt").each(function() {
+		   		$(this).click(function() {
+		   			$("#mask").hide();
+		   			$(".PopupBox").hide();
+		   		});
+		    });
+
+		    // 点击分享取消
+		    $(".closePromptBtn").each(function() {
+		    	$(this).click(function() {
+		    		$("#mask").hide();
+		   			$(".PopupBox").hide();
+		    	});
+		    });
+
+
+		    // 点击过滤条按钮
+		    $(".knowledgeRepo-filter-btn").each(function(filterBtnIndex) {
+		    	$(this).click(function() {
+		    		$(".knowledgeRepo-filter-btn").removeClass("knowledgeRepo-filter-btn-current");
+		    		$(".knowledgeRepo-filter-btn").eq(filterBtnIndex).addClass("knowledgeRepo-filter-btn-current");
+		    	});
+		    });
+
+
+
+
+
+
+
+
+
+
+		    // 标签操作开始===========================================================================================================================
+
+		    // 点击标签操作btn(全部，未分类按钮不会被添加删除icon)
+		   var btn=$(".editTag-btn");
+
+
+		    btn.toggle(
+		    	function() {
+		    		$(".editTag-btn span").html("保存");
+		    		$(".editTag-btn button").css("background","#2A9B63");
+
+		    		$(".knowledgeRepo-colTag-item_del").append('<i class="xk-cuo xsxkxtFont delTag">');
+		    		
+		    		
+		    		btn.removeClass("editTag-btn");// 移除class=editTag-btn
+		    		btn.addClass("saveTag-btn");// 增加class=editTag-btn
+		    		btn.after('<div class="knowledgeRepo-colTag-operate-btn editTag-cancel-btn" style="padding-right: 1em;"><button  class="btn"><span>取消</span></button></div>');
+
+					
+					$(".knowledgeRepo-colTag-item_del").each(function(knowledgeRepocolTagitemIndex) {
+						$(this).one("click",function() {
+							$(".knowledgeRepo-colTag-item_del").eq(knowledgeRepocolTagitemIndex).remove();
+						});
+					});
+
+					
+		    	},
+		    	function() {
+		    		$(".saveTag-btn span").html("编辑");
+		    		$(".saveTag-btn button").css("background","#0F88EB");
+
+		    		$(".knowledgeRepo-colTag-item_del").find(".delTag").remove();
+
+		    		btn.addClass("editTag-btn");
+		    		btn.removeClass("saveTag-btn");
+		    		btn.next().remove();
+		    		
+		    	}
+		    );
+
+		    
+
+		    /*
+		    $(".knowledgeRepo-colTag-operate-btn").one(function() {
+		    	$(".knowledgeRepo-colTag-item").append('<i class="xk-cuo xsxkxtFont delTag">');
+		    });
+
+
+			// 点击静态编辑按钮插入交叉号icon
+			$(".editTag-btn").click(function() {
+				$(".knowledgeRepo-colTag-item").append('<i class="xk-cuo xsxkxtFont delTag">');
+			});
+
+			// 点击动态添加的编辑按钮后动态插入交叉号的删除icon）
+			$(document).live("click",'.editTag-btn',function() {
+				$(".knowledgeRepo-colTag-item").append('<i class="xk-cuo xsxkxtFont delTag">');
+			});
+			// 点击点击动态添加的保存按钮后移除交叉号icon
+			$(document).live('click', '.saveTag-btn', function() {
+			 	$(".delTag").remove();
+			});	
+			// 点击动态添加的交叉号icon删除当前标签
+			$(document).live('click', '.knowledgeRepo-colTag-item', function() {
+			   $(".knowledgeRepo-colTag-item").each(function(knowledgeRepocolTagitemIndex) {
+			   		$(this).click(function() {
+			   			$(".knowledgeRepo-colTag-item").eq(knowledgeRepocolTagitemIndex).remove();
+			   		});
+			   });
+			});	
+
+
+		     */
+		    
+
+		    // a 老夫不想写了=。=。。。。。。。。。。。。。。
+		 
+		    // 标签操作结束===========================================================================================================================
+
+
+
+
+		    // 双击文章右上角标签进行编辑
+		    // 插件在这里 https://github.com/sniperwolf/taggingJS 
+
+		    
+		});
+	</script>
+
+	<!-- tooltipster官方文档：http://iamceege.github.io/tooltipster/ -->
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script> -->
+    <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+            $('.tooltip').tooltipster({
+                theme: 'tooltipster-shadow'
+            });
+        });	
+    </script>
+
+
+    <!-- 防止图片被拖到新窗口打开 -->
+    <script language="javascript">
+    	$("img").bind("dragstart",function(){return false;});
+    </script>
+</body>
+</html>
+
+
+
+
