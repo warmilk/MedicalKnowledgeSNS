@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!-- 如果安装了Google chrome frame则强制用GCF来渲染，否则IE用最高版本的IE内核来渲染 -->
+	<meta name="renderer" content="ie-comp"><!-- 360的话默认用ie兼容内核 -->
+
+	<link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
+	<title>WMK医宝 | 个人信息</title>
+
+	<!-- tooltipster -->
+	<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
+
+	<!-- jRange -->
+	<link rel="stylesheet" type="text/css" href="jRange/jquery.range.css">
+
+	<!-- iCheck -->
+	<link rel="stylesheet" href="iCheck/flat/blue.css">
+	
+    <link rel="stylesheet" type="text/css" href="css/font/font_3xfq2v964oyldi.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_x500vx727nl8fr.css"><!-- 需要联网的网络字体图标。也可下载到本地服务器直接调用，把路径引对即可 -->
+
+
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/popupBox.css">
+
+	<link rel="stylesheet" type="text/css" href="css/myNote.css">
+	<link rel="stylesheet" type="text/css" href="css/userSet.css">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" />
+	<![endif]-->
+	
+	
+	
+	
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<div class="alert-danger" role="alert">
+			你的浏览器实在<strong>太太太太太太旧了</strong>，导致页面无法完美显示渲染。放学别走，升级完浏览器再说 → <a target="_blank" class="alert-danger-anchor" href="http://browsehappy.com">立即升级</a>
+		</div>
+	<![endif]-->
+	<div class="container">
+		<div class="header">
+			<header>
+				<div class="header-memu">
+					<ul>
+						<li class="header-memu_item">
+							<a class="anchor" href="index.html">首页</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="myCollect-zsk.html">知识广场</a>
+						</li>
+						<li class="header-memu_item">
+							<a class="anchor" href="myNote.html">知识库</a>
+						</li>
+						<li class="header-memu_item">
+							<div class="header-memu_line"></div>
+						</li>
+
+						<!-- 未登录 -->
+						<li class="header-memu_item register">
+							<div class="imgWrap"><img src="images/HeaderRegister.png"></div><a class="anchor" href="register.html">注册</a>
+						</li>
+						<li class="header-memu_item login">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="login.html">登录</a>
+						</li>
+
+						<!-- 登陆后 -->
+						<li class="header-memu_item login dropdown-btn">
+							<div class="imgWrap"><img src="images/headerLogin.png"></div><a class="anchor" href="javascript:void(0);"><span id="user-nickname">超级大帅比</span></a>
+							<ul  class="dropdown-meau" style="display: none;">
+								<i class="triangel"></i>
+								<li class="dropdown-meau-item"><a href="myCollect-zsk.html"><i class="iconfont icon-star"></i>个人中心</a></li>
+								<li class="dropdown-meau-item"><a href="userSet.html"><i class="iconfont icon-yonghu"></i>我的信息</a></li>
+								<li class="dropdown-meau-item"><a href="index.html"><i class="iconfont icon-tuichu"></i>退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="header-logo imgWrap">
+					<img src="images/logo.png">
+				</div>
+			</header>
+		</div>
+
+
+
+		<div class="main">
+			<main>
+
+
+				<!-- 左侧导航栏 -->
+				<div class="navWrap">
+					<ul class="main-nav">
+						<li>
+							<a href="#"><span class="main-nav-Ltxt">我的设置</span><span class="nav-Rtxt">80%</span></a>
+							<ul class="sub-nav">
+								<li>
+									<a href="#"><span>个人信息</span><span class="nav-Rtxt">80%</span></a>
+								</li>
+								<li>
+									<a href="#"><span>账号设置</span><span class="nav-Rtxt">100%</span></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+
+
+				<!-- 右侧主要内容 -->
+				<div class="mainContent">
+					<!-- 个人信息 -->
+					<section class="knowledgeRepo knowledgeRepo-colTagWrap">
+
+
+						<!-- 小标题 -->
+						<h4 class="knowledgeRepoWrapper-title"><a href="#">我的设置</a>&nbsp;&gt;&nbsp;个人信息</h4>
+
+						<!-- 我的信息 -->
+						<form>
+							<div class="knowledgeRepoWrapper">
+								<div class="knowledgeRepoContent knowledgeRepo-colTag">
+									<!-- 个人信息展示 -->
+									<div class="knowledgeRepo-colTag-show userSet-info">
+										<!-- 头像 -->
+										<div class="userSet-info-portrait-wrap userSet-info-item">
+											<!-- 头像图片 -->
+											<div class="userSet-info-portrait"></div>
+											<!-- 修改头像按钮 -->
+											<a href="javascript:;" class="userSet-info-portrait-btn">修改头像
+											    <input type="file" name="" id=""  accept="image/png,image/jpeg,image/gif">
+											</a>
+										</div>
+										<!-- 昵称 -->
+										<div class="userSet-info-nickname-wrap userSet-info-item">
+											<label><span class="userSet-info-label">昵称：</span><input type="text" name="" placeholder="超级大帅比"></label>
+										</div>
+										<!-- 性别 -->
+										<div class="userSet-info-sex-wrap userSet-info-item">
+											<span class="userSet-info-label">性别：</span>
+											<div>
+												<label class="userSet-info-sex-item"><input type="radio" name="user-sex"><span>保密</span></label>
+												<label class="userSet-info-sex-item"><input type="radio" name="user-sex" checked><span>男</span></label>
+												<label class="userSet-info-sex-item"><input type="radio" name="user-sex"><span>女</span></label>
+											</div>
+										</div>
+									</div>
+									<!-- 个人信息操作 -->
+									<div class="knowledgeRepo-colTag-operate">
+										<div>
+											<div class="knowledgeRepo-colTag-operate-input filterInput tooltip" title="我的个人信息完成程度">
+												<input type="hidden" class="slider single-slider finish-slider" value="60"  />
+											</div>
+											<div class="knowledgeRepo-colTag-operate-btn editTag-btn"><button class="btn"><i class="iconfont icon-bianji"></i><span>编辑</span></button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</section>
+
+					<!-- 账号设置-->
+					<section class="knowledgeRepo knowledgeRepo-colItemWrap">
+
+
+						<!-- 小标题 -->
+						<h4 class="knowledgeRepoWrapper-title knowledgeRepo-col-title"><a href="#">我的设置</a>&nbsp;&gt;&nbsp;账号设置</h4>
+
+						<!-- 账号设置 -->
+						<aside>
+							<div class="knowledgeRepo-filter userSet-account">
+								<div>
+									<div class="knowledgeRepo-filter-btn knowledgeRepo-filter-btn-current">
+										<button class="btn" id="pwModi-btn">修改密码</button>
+									</div>
+									<div class="knowledgeRepo-filter-btn knowledgeRepo-filter-btn-current">
+										<button class="btn">注销</button>
+									</div>
+									<div class="knowledgeRepo-filter-input filterInput">
+										<input type="text" name="" placeholder="查找我的收藏"><i class="knowledgeRepo-colTag-operate-searchicon"><img src="images/search-gray.png" alt=""></i>
+									</div>
+								</div>
+							</div>
+						</aside>
+
+
+						
+					</section>
+				</div>
+				
+				<!-- 半透明遮罩 -->
+				<div style="position: fixed; top: 0px; left: 0px; bottom: 0px; right:0px; background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.6; filter: alpha(opacity:60); z-index: 100; display: none;" id="mask"></div>
+				
+				
+				<!-- 修改密码弹出框 -->
+				<div class="PopupBox PwModi-popbox" style="display: none;">
+				    <h4 class="PopupBox-title title">修改密码</h4>
+				    <button class="btn closePrompt"><i class="xk-cuo xsxkxtFont"></i></button>
+				    <div class="pwModiContent">
+				        <div>
+				            <label><span class="left">验证旧密码：</span><input type="password" id="oldPwd" placeholder="请输入6-12位的旧密码"></label>
+				        </div>
+				        <div>
+				            <label><span class="left">请设置新密码：</span><input type="password" id="newPwd" placeholder="请输入6-12位的新密码"></label>
+				        </div>
+				        <div>
+				            <label><span class="left">再次输入新密码：</span><input type="password" id="confirmPwd" placeholder="请输入6-12位的新密码"></label>
+				        </div>
+				        <button class="btn PwModi-popbox-subBtn" type="button" onclick="editPwd();" id="qrxg">确认</button>
+				    </div>
+				    <div id="errorPwd" style="font-size: 14px; color: red; text-align:center;display:none"></div>
+				</div> 
+
+			</main>
+		</div>
+
+
+		<div class="footer">
+			<footer>
+				<div class="footerWrap">
+					<p>&copy;2017 - WMKmedical . com 粤ICP备 8888888888号</p>
+					<ul>
+						<li>
+							<a class="anchor" href="#">关于我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">加入我们</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">用户须知</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">服务条款</a>
+						</li>
+						<li>
+							<a class="anchor" href="#">隐私政策</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+	
+	<!-- 让footer始终在最底部 -->
+	<script type="text/javascript">
+		var header = $('.header');
+	    var inner = $('.main');
+	    var footer = $('.footer'); 
+	    var win = $(window);
+
+
+	    function fix_footer(){
+	        var h = win.height() - header.outerHeight() - footer.outerHeight();
+	        inner.css({
+	            minHeight: h < 0 ? 0 : h
+	        });
+	    }
+
+	    fix_footer();
+
+	    win.on('resize',function(){
+	        fix_footer();
+	    });
+	</script>
+
+
+	<!-- 点击用户名 -->
+	<script>
+	$(document).ready(function (){
+		/*下弹菜单*/
+	   $(".dropdown-btn").each(function(index){
+		    $(this).click(function(){ 
+		    	if($(".dropdown-meau").eq(index).css("display")=="none"){
+		    		$(".dropdown-meau").eq(index).show();
+		    		$(".dropdown-meau").eq(index).mouseleave(function () {
+		    			$(".dropdown-meau").eq(index).hide();
+		    		});
+ 		    	}
+		    	else{
+		    		$(".dropdown-meau").eq(index).hide();
+		    	}
+
+		    	$(".search-dropdown-meau-item").each(function (itemIndex) {
+		    		$(this).click(function () {
+		    			$(this).parent().siblings().html('<span>'+$(".search-dropdown-meau-item").eq(itemIndex).html()+'<i class="search-triangel"></i></span>');
+		    		});
+		    	});
+		    	
+		    });
+	    });
+    });
+	</script>
+
+	
+
+	
+	<script type="text/javascript">
+		$(document).ready(function (){
+			
+
+
+
+		   // 点击修改密码
+		    $("#pwModi-btn").each(function(shareIndex) {
+		   		$(this).click(function() {
+		   			$(".PopupBox").show().addClass("animated rubberBand");
+		   			$("#mask").show();
+		   		});
+		    });
+
+		    // 点击关闭
+		    $(".closePrompt").each(function() {
+		   		$(this).click(function() {
+		   			$("#mask").hide();
+		   			$(".PopupBox").hide();
+		   		});
+		    });
+
+		   
+
+		    // 标签操作开始=========================================================================================================
+
+		   // 点击标签操作btn(全部，未分类按钮不会被添加删除icon)
+		    var btn=$(".editTag-btn");
+
+
+		    btn.toggle(
+		    	function() {
+		    		$(".editTag-btn span").html("保存");
+		    		$(".editTag-btn button").css("background","#2A9B63");
+
+		    		$(".knowledgeRepo-colTag-item_del").append('<i class="xk-cuo xsxkxtFont delTag">');
+		    		
+		    		
+		    		btn.removeClass("editTag-btn");// 移除class=editTag-btn
+		    		btn.addClass("saveTag-btn");// 增加class=editTag-btn
+		    		btn.after('<div class="knowledgeRepo-colTag-operate-btn editTag-cancel-btn" style="padding-right: 1em;"><button  class="btn"><span>取消</span></button></div>');
+
+					
+					$(".knowledgeRepo-colTag-item_del").each(function(knowledgeRepocolTagitemIndex) {
+						$(this).one("click",function() {
+							$(".knowledgeRepo-colTag-item_del").eq(knowledgeRepocolTagitemIndex).remove();
+						});
+					});
+
+					
+		    	},
+		    	function() {
+		    		$(".saveTag-btn span").html("编辑");
+		    		$(".saveTag-btn button").css("background","#0F88EB");
+
+		    		$(".knowledgeRepo-colTag-item_del").find(".delTag").remove();
+
+		    		btn.addClass("editTag-btn");
+		    		btn.removeClass("saveTag-btn");
+		    		btn.next().remove();
+		    		
+		    	}
+		    );
+
+
+		});
+	</script>
+
+	<!-- tooltipster官方文档：http://iamceege.github.io/tooltipster/ -->
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script> -->
+    <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+            $('.tooltip').tooltipster({
+                theme: 'tooltipster-shadow'
+            });
+        });	
+    </script>
+	
+	<!-- jRange官方文档：http://nitinhayaran.github.io/jRange/demo/ -->
+	<script type="text/javascript" src="jRange/jquery.range.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('.single-slider').jRange({
+                from: 0,
+                to: 100,
+                step: 1,
+                scale: [0,25,50,75,100],
+                format: '%s',
+                width: 300,
+                showLabels: true,
+                showScale:false,
+                snap: true
+            });
+           
+            // 设置各条滑动条初始数值
+            $('.finish-slider').jRange('setValue', '60');
+            
+            // 让滑动块无法拖动（让用户禁用水平滑动条）
+            $('.slider').jRange('disable');
+        });
+    </script>
+
+    <!-- 男女性别的RadioBox -->
+    <script src="iCheck/icheck.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_flat-blue',
+        radioClass: 'iradio_flat-blue'
+      });
+    });
+    </script>
+
+
+    <!-- 防止图片被拖到新窗口打开 -->
+    <script language="javascript">
+    	$("img").bind("dragstart",function(){return false;});
+    </script>
+</body>
+</html>
+
+
+
+
